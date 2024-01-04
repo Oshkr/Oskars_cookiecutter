@@ -4,7 +4,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = Oshkr
+PROJECT_NAME = Oskars_cookiecutter
 PYTHON_VERSION = 3.10.13
 PYTHON_INTERPRETER = python
 
@@ -37,9 +37,12 @@ clean:
 #################################################################################
 
 ## Process raw data into processed data
-data: requirements
+data:
 	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/data/make_dataset.py
 
+## training the model
+train:
+	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/train_model.py
 #################################################################################
 # Documentation RULES                                                           #
 #################################################################################
